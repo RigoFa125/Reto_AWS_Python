@@ -13,6 +13,10 @@ def esPrimo(numero):
 
 primos = []
 
-for indice in range(1, 250):
+for indice in range(1, 251):
     if esPrimo(indice):
         primos.append(indice)
+
+with open('results.txt', 'w') as archivo:
+    for primo in primos:
+        archivo.write(str(primo) + '\n')
